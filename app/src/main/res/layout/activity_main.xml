@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5637ff "
+    android:orientation="vertical"
+    tools:context=".ui.view.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/searchAnime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/searchview_skin"
+            android:closeIcon="@drawable/ic_close"
+            android:iconifiedByDefault="false"
+
+            android:inputType="text"
+            android:maxWidth="300dp"
+            android:padding="4dp"
+            android:queryHint="@string/search_hint"
+            android:searchIcon="@drawable/ic_search"
+            android:theme="@style/CustomSearchView">
+
+        </SearchView>
+
+        <ImageView
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/filter_skin"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_filter" />
+
+    </LinearLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:useDefaultMargins="true"
+            android:visibility="visible">
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+
+        </GridLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAnimes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+</LinearLayout>

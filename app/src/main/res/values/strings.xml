@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SYA</string>
+    <string name="search_hint">Introduce un anime...</string>
+</resources>
